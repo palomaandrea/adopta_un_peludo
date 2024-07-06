@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--fuente para adopta a un peludo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!--link a hoja de estilo-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--fuente para textos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Adopta un Peludo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donaciones.html">Donaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Búsqueda">
+                    <button class="btn btn-primary" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Formulario de contacto</h2>
+        <p>¿Quieres ser parte de la comunidad de Adopta un peludo? Obtendrás acceso a novedades sobre las fundaciones asociadas, aparte de un beneficio de descuento de 5% en tu primera compra en la tienda de Adopta un Peludo. ¿Qué esperas? ¡Te invitamos a formar parte!</p>
+        </br>
+        <form id="contactForm" class="needs-validation" novalidate>
+            <!-- Nombres y Apellidos -->
+            <div class="mb-3">
+                <label for="firstName" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" required pattern="[a-zA-Z\s]+"
+                    title="Por favor, introduce solo letras y espacios">
+                <div class="invalid-feedback">
+                    Por favor, introduce tu nombre.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" required pattern="[a-zA-Z\s]+"
+                    title="Por favor, introduce solo letras y espacios">
+                <div class="invalid-feedback">
+                    Por favor, introduce tus apellidos.
+                </div>
+            </div>
+
+            <!-- Teléfono y Email -->
+            <div class="mb-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]{9}">
+                <div class="invalid-feedback">
+                    Por favor, introduce un número de teléfono válido (9 dígitos).
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="invalid-feedback">
+                    Por favor, introduce un correo electrónico válido.
+                </div>
+            </div>
+
+            <!-- Ciudad de Residencia -->
+            <div class="mb-3">
+                <label for="city" class="form-label">Ciudad de Residencia</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+                <div class="invalid-feedback">
+                    Por favor, introduce tu ciudad de residencia.
+                </div>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Validación de Formulario con Bootstrap -->
+    <script>
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    </script>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img src="img/facebook.png"
+                        alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/"><img
+                        src="img/instagram.png" alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img src="img/gorjeo.png"
+                        alt="Twitter" width="24" height="24"></a></li>
+        </ul>
+    </div>
+
+
+
+</body>
+
+</html>

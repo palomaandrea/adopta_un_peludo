@@ -1,0 +1,37 @@
+{
+    "Productos para perros":[
+        {
+            "Bandanas":[
+                {
+                    "imagenProducto": "",
+                    "nombreProducto": "Bandana navideña",
+                    "valorProducto": "",
+                    "descripcionProducto": "Linda bandana para festividades de niños, adultos y mascotas.",
+                    "cantidadProducto": ""
+                },
+                {
+                    "imagenProducto": "",
+                    "nombreProducto": "Bandana Rockera",
+                    "valorProducto": "",
+                    "descripcionProducto": "Ideal para salir de paseo a visitar a amigos o familiares.",
+                    "cantidadProducto": ""
+                },
+                {
+                    "imagenProducto": "",
+                    "nombreProducto": "Surtido de bandanas",
+                    "valorProducto": "",
+                    "descripcionProducto": "Para comer, jugar o simplemente para llevar, diversas opciones."
+                }
+            ],
+            "Alimento":[
+                {
+
+                }
+            ]
+
+        },
+        {
+            
+        }
+    ]
+}

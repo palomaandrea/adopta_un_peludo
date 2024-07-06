@@ -1,0 +1,19 @@
+{
+    "Fundaciones": [
+        {
+            "nombre": "ChileAnimal",
+            "sitioWeb": "https://www.chileanimal.cl/",
+            "descripcion": "Es una Organizacion animal Desde el extremo norte con el desierto más árido del mundo, hasta la zona austral del país que nos sorprende con su asombrosa geografía y diferentes especies de animales, Chile es una invitación difícil de rechazar."
+        },
+        {
+            "nombre": "YoDono",
+            "sitioWeb": "https://yodono.cl/",
+            "descripcion": "YoDono.cl es una plataforma web que permite conectar a personas y empresa con ganas de donar con instituciones y proyectos sin fines de lucro que requieren financiamiento. Transparente, amigable y 100% online."
+        },
+        {
+            "nombre": "Unión de Amigos de los Animales - UAA",
+            "sitioWeb": "https://uniondeamigosdelosanimales.cl/",
+            "descripcion": "La Unión de Amigos de los Animales (UAA), es una corporación sin fines de lucro, fundada el 12 de junio de 1955, por 100 socios de la Protectora de Animales Benjamín Vicuña Mackenna. Así nace UAA con el fin de proteger y cuidar a perros y gatos del maltrato. Uno de nuestros fundadores, el señor Godofredo Stutzin, es conocido por ser el primer animalista chileno."
+        }
+    ]
+}
