@@ -20,3 +20,7 @@ def nosotros(request):
 def tienda(request):
     context={}
     return render(request, 'adopta_un_peludo/tienda.html', context)
+
+def inicia_sesion(request):
+    context={}
+    return render(request, 'adopta_un_peludo/inicia_sesion.html', context)

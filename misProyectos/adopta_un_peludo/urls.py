@@ -8,4 +8,5 @@ urlpatterns = [
     path('donaciones', views.donaciones, name='donaciones'),
     path('nosotros', views.nosotros, name='nosotros'),
     path('tienda', views.tienda, name='tienda'),
+    path('inicia_sesion', views.inicia_sesion, name='inicia_sesion'),
 ]
