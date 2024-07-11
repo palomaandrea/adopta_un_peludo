@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Adopta un Peludo</a>
+            <a class="navbar-brand" href="{% url 'index' %}">Adopta un Peludo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -35,27 +35,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tienda.html">Tienda</a>
+                        <a class="nav-link" href="{% url 'tienda' %}">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="donaciones.html">Donaciones</a>
+                        <a class="nav-link" href="{% url 'donaciones' %}">Donaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="inicia_sesion.html">Iniciar sesión</a>
+                        <a class="nav-link" href="{% url 'inicia_sesion' %}">Iniciar sesión</a>
                     </li>
 
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Búsqueda">
+                    <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
+                        aria-label="Búsqueda">
                     <button class="btn btn-primary" type="submit">Buscar</button>
                 </form>
             </div>
@@ -90,47 +91,58 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
-                <img src="img/ivan.webp" class="card-img-top" alt="...">
+                <img src="{% static 'img/ivan.webp' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Iván Moreira</h5>
-                    <p class="card-text">Mi pasión por la ciencia y el conocimiento ha guiado mi carrera en informática y tecnologías de la información. Desde
-                    pequeño, he sido curioso acerca del mundo y los procesos naturales. Estoy motivado para explorar, aprender y contribuir
-                    significativamente en mi campo, valorando el trabajo en equipo como esencial. Aspiro a que mis esfuerzos mejoren
-                    continuamente mi desarrollo personal, científico y profesional.</p>
+                    <p class="card-text">Mi pasión por la ciencia y el conocimiento ha guiado mi carrera en informática
+                        y tecnologías de la información. Desde
+                        pequeño, he sido curioso acerca del mundo y los procesos naturales. Estoy motivado para
+                        explorar, aprender y contribuir
+                        significativamente en mi campo, valorando el trabajo en equipo como esencial. Aspiro a que mis
+                        esfuerzos mejoren
+                        continuamente mi desarrollo personal, científico y profesional.</p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="img/genesis.webp" class="card-img-top" alt="...">
+                <img src="{% static 'img/genesis.webp' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Genesis Cortez</h5>
-                    <p class="card-text">Soy una mujer que equilibra diligentemente mi carrera, estudios y una hermosa vida familiar. Mi amor por
-                    los animales es profundo y me dedico activamente a contribuir a su bienestar, siempre buscando maneras de hacer una
-                    diferencia positiva en sus vidas.</p>
+                    <p class="card-text">Soy una mujer que equilibra diligentemente mi carrera, estudios y una hermosa
+                        vida familiar. Mi amor por
+                        los animales es profundo y me dedico activamente a contribuir a su bienestar, siempre buscando
+                        maneras de hacer una
+                        diferencia positiva en sus vidas.</p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="img/palomaContreras.webp" class="card-img-top" alt="...">
+                <img src="{% static 'img/palomaContreras.webp' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Paloma Contreras</h5>
-                    <p class="card-text">Estoy profundamente motivada por el conocimiento y el aprendizaje, especialmente en temas relacionados con animales y
-                    nuestro impacto en ellos. Me esfuerzo por contribuir significativamente en equipos, buscando inspiración para mi
-                    crecimiento personal y profesional. Trabajo diariamente en perfeccionar mis habilidades para apoyar las causas que me
-                    apasionan.</p>
+                    <p class="card-text">Estoy profundamente motivada por el conocimiento y el aprendizaje,
+                        especialmente en temas relacionados con animales y
+                        nuestro impacto en ellos. Me esfuerzo por contribuir significativamente en equipos, buscando
+                        inspiración para mi
+                        crecimiento personal y profesional. Trabajo diariamente en perfeccionar mis habilidades para
+                        apoyar las causas que me
+                        apasionan.</p>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="img/hans.webp" class="card-img-top" alt="...">
+                <img src="{% static 'img/hans.webp' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Hans Ramirez</h5>
-                    <p class="card-text">Soy un apasionado defensor de los animales. Mi vida profesional está dedicada a mejorar su bienestar,
-                    trabajando incansablemente en iniciativas y proyectos que promueven su protección y cuidado. Mi amor por estos seres
-                    vivos guía cada paso que doy, buscando siempre el impacto positivo y sustentable en sus vidas.</p>
+                    <p class="card-text">Soy un apasionado defensor de los animales. Mi vida profesional está dedicada a
+                        mejorar su bienestar,
+                        trabajando incansablemente en iniciativas y proyectos que promueven su protección y cuidado. Mi
+                        amor por estos seres
+                        vivos guía cada paso que doy, buscando siempre el impacto positivo y sustentable en sus vidas.
+                    </p>
                 </div>
             </div>
         </div>
@@ -141,12 +153,12 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>© 2024 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img src="img/facebook.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img
+                        src="{% static 'img/facebook.png' %}" alt="Twitter" width="24" height="24"></a></li>
             <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/"><img
-                        src="img/instagram.png" alt="Twitter" width="24" height="24"></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img src="img/gorjeo.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+                        src="{% static 'img/instagram.png' %}" alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img
+                        src="{% static 'img/gorjeo.png' %}" alt="Twitter" width="24" height="24"></a></li>
         </ul>
     </div>
 

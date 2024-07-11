@@ -21,7 +21,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Adopta un Peludo</a>
+            <a class="navbar-brand" href="{% url 'index' %}">Adopta un Peludo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -30,27 +30,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tienda.html">Tienda</a>
+                        <a class="nav-link" href="{% url 'tienda' %}">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="donaciones.html">Donaciones</a>
+                        <a class="nav-link" href="{% url 'donaciones' %}">Donaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="inicia_sesion.html">Iniciar sesión</a>
+                        <a class="nav-link" href="{% url 'inicia_sesion' %}">Iniciar sesión</a>
                     </li>
 
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Búsqueda">
+                    <input class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
+                        aria-label="Búsqueda">
                     <button class="btn btn-primary" type="submit">Buscar</button>
                 </form>
             </div>
@@ -59,32 +60,40 @@
     <br />
 
     {% for usuario in usuarios %}
-        Te damos la bienvenida {{ usuario.nombre }} {{ usuario.apellido }}, tu nombre de usuario es {{ usuario.usuario }} <br/>
+    Te damos la bienvenida {{ usuario.nombre }} {{ usuario.apellido }}, tu nombre de usuario es {{ usuario.usuario }}
+    <br />
     {% endfor %}
 
-    <br/>
+    <br />
 
     <form>
         <div class="form-group">
-            <label for="inputEmail4">Usuario</label>
-                <input type="text" class="form-control" id="usuario" placeholder="Ingrese su nombre de usuario">
-            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos.</small>
-        </div>    <br/>
+            <<<<<<< HEAD <label for="exampleInputEmail1">Correo electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Ingresa tu correo electrónico">
+                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu correo.</small>
+        </div>
+        =======
+        <label for="inputEmail4">Usuario</label>
+        <input type="text" class="form-control" id="usuario" placeholder="Ingrese su nombre de usuario">
+        <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos.</small>
+        </div> <br />
 
+        >>>>>>> fc587667d44971daa40fb9259c50561d02afa9dc
         <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
-        </div>    <br/>
+        </div> <br />
 
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Soy un ser humano, no un robot.</label>
-        </div>    <br/>
+        </div> <br />
 
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 
-    <br/>
+    <br />
 
 
     <!-- <hr class="featurette-divider">
@@ -132,12 +141,12 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>© 2024 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img src="img/facebook.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img
+                        src="{% static 'img/facebook.png' %}" alt="Twitter" width="24" height="24"></a></li>
             <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/"><img
-                        src="img/instagram.png" alt="Twitter" width="24" height="24"></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img src="img/gorjeo.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+                        src="{% static 'img/instagram.png' %}" alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img
+                        src="{% static 'img/gorjeo.png' %}" alt="Twitter" width="24" height="24"></a></li>
         </ul>
     </div>
 
