@@ -26,7 +26,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Adopta un Peludo</a>
+            <a class="navbar-brand" href="{% url 'index' %}">Adopta un Peludo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -35,22 +35,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tienda.html">Tienda</a>
+                        <a class="nav-link" href="{% url 'tienda' %}">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="donaciones.html">Donaciones</a>
+                        <a class="nav-link" href="{% url 'donaciones' %}">Donaciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link" href="{% url 'nosotros' %}">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="inicia_sesion.html">Iniciar sesión</a>
+                        <a class="nav-link" href="{% url 'inicia_sesion' %}">Iniciar sesión</a>
                     </li>
 
                 </ul>
@@ -72,7 +72,7 @@
             <!-- Imagen 1 -->
             <div class="col-md-4 mb-4 text-center">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imagen1Modal">
-                    <img src="img/chileanimal.png" class="img-fluid rounded" alt="Imagen 1">
+                    <img src="{% static 'img/chileanimal.png' %}" class="img-fluid rounded" alt="Imagen 1">
                 </a>
                 <p class="text-center mt-2"><a href="https://www.chileanimal.cl/" target="_blank">Chile Animal</a></p>
             </div>
@@ -80,7 +80,7 @@
             <!-- Imagen 2 -->
             <div class="col-md-4 mb-4 text-center">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imagen2Modal">
-                    <img src="img/yodono.jpg" class="img-fluid rounded" alt="Imagen 2">
+                    <img src="{% static 'img/yodono.jpg' %}" class="img-fluid rounded" alt="Imagen 2">
                 </a>
                 <p class="text-center mt-2"><a href="https://yodono.cl/" target="_blank">Corporacion Yodono</a>
                 </p>
@@ -89,7 +89,7 @@
             <!-- Imagen 3 -->
             <div class="col-md-4 mb-4 text-center">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imagen3Modal">
-                    <img src="img/uaa.png" class="img-fluid rounded" alt="Imagen 3">
+                    <img src="{% static 'img/uaa.png' %}" class="img-fluid rounded" alt="Imagen 3">
                 </a>
                 <p class="text-center mt-2"><a href="https://uniondeamigosdelosanimales.cl/" target="_blank">Unión de
                         Amigos de los Animales<a /></p>
@@ -102,7 +102,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-center align-items-center h-100">
-                    <img src="img/chileanimal.png" class="img-fluid" alt="Imagen 1">
+                    <img src="{% static 'img/chileanimal.png' %}" class="img-fluid" alt="Imagen 1">
                     <p class="text-center mt-2"> Es una Organizacion animal Desde el extremo norte con el
                         desierto más árido del mundo, hasta la zona austral del país que nos sorprende con su asombrosa
                         geografía y diferentes especies de animales, Chile es una invitación difícil de rechazar. </p>
@@ -115,7 +115,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-center align-items-center h-100">
-                    <img src="img/yodono.jpg" class="img-fluid" alt="Imagen 2">
+                    <img src="{% static 'img/yodono.jpg' %}" class="img-fluid" alt="Imagen 2">
                     <p class="text-center mt-2">YoDono.cl es una plataforma web que permite conectar a personas y
                         empresa con ganas de donar con instituciones y proyectos sin fines de lucro que requieren
                         financiamiento.
@@ -129,7 +129,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body d-flex justify-content-center align-items-center h-100">
-                    <img src="img/uaa.png" class="img-fluid" alt="Imagen 3">
+                    <img src="{% static 'img/uaa.png' %}" class="img-fluid" alt="Imagen 3">
                     <p class="text-center mt-2">La Unión de Amigos de los Animales (UAA), es una corporación sin fines
                         de lucro, fundada el 12 de junio de 1955, por 100 socios de la Protectora de Animales Benjamín
                         Vicuña Mackenna. Así nace UAA con el fin de proteger y cuidar a perros y gatos del maltrato. Uno
@@ -143,12 +143,12 @@
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
         <p>© 2024 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img src="img/facebook.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://web.facebook.com/"><img
+                        src="{% static 'img/facebook.png' %}" alt="Twitter" width="24" height="24"></a></li>
             <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/"><img
-                        src="img/instagram.png" alt="Twitter" width="24" height="24"></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img src="img/gorjeo.png"
-                        alt="Twitter" width="24" height="24"></a></li>
+                        src="{% static 'img/instagram.png' %}" alt="Twitter" width="24" height="24"></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="https://twitter.com/"><img
+                        src="{% static 'img/gorjeo.png' %}" alt="Twitter" width="24" height="24"></a></li>
         </ul>
     </div>
 
