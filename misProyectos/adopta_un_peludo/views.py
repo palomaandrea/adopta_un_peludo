@@ -24,8 +24,7 @@ def tienda(request):
     return render(request, 'adopta_un_peludo/tienda.html', context)
 
 def inicia_sesion(request):
-    usuarios= Usuario.objects.all()
-    context={"usuarios":usuarios}
+    context={}
     return render(request, 'adopta_un_peludo/inicia_sesion.html', context)
 
 def crear_cuenta(request):
@@ -33,7 +32,7 @@ def crear_cuenta(request):
     return render(request, 'adopta_un_peludo/crear_cuenta.html', context)
 
 def listadoSQL(request):
-    usuarios= Usuario.objects.raw('SELECT * FROM usuarios_usuario')
+    usuarios= Usuario.objects.raw('SELECT * FROM instituto_usuario')
     print(usuarios)
     context={"usuarios":usuarios}
     return render(request, 'adopta_un_peludo/listadoSQL.html',context)
